@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE jbosscmp-jdbc PUBLIC
+"-//JBoss//DTD JBOSSCMP-JDBC 3.0//EN"
+"http://www.jboss.org/j2ee/dtd/jbosscmp-jdbc_3_0.dtd">
+
+<datasources>
+<local-tx-datasource>
+<jndi-name>bookstoreDS</jndi-name>
+<connection-url>jdbc:mysql://localhost:3306/bookstoredb</connection-url>
+<driver-class>com.mysql.jdbc.Driver</driver-class>
+<use-java-context>false</use-java-context>
+<user-name>beehiveuser</user-name>
+<password>password</password>
+</local-tx-datasource>
+</datasources>

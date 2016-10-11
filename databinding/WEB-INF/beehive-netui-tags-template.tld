@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee">
+    <description><![CDATA[NetUI Template controls taglibrary.]]></description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>netui-template</short-name>
+    <uri>http://beehive.apache.org/netui/tags-template-1.0</uri>
+
+    <tag>
+
+        <description><![CDATA[Place this tag in a template file, and then set its value with the netui-template:setAttribute tag.]]></description>
+        <name>attribute</name>
+        <tag-class>org.apache.beehive.netui.tags.template.Attribute</tag-class>
+
+        <attribute>
+            <description><![CDATA[The default value for <netui-template:attribute> placeholder.]]></description>
+            <name>defaultValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <description><![CDATA[The name for the &lt;netui-template:attribute> placeholder. The name may be used more than once in a template page.]]></description>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <description><![CDATA[Include this tag in a template file to mark out content that will be used in another JSP page.]]></description>
+        <name>includeSection</name>
+        <tag-class>org.apache.beehive.netui.tags.template.IncludeSection</tag-class>
+
+        <attribute>
+            <description><![CDATA[A default JSP page to provide content for the placeholder if the content page fails to define the content.]]></description>
+            <name>defaultPage</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <description><![CDATA[The name of the section. This name must be unique within the template page.]]></description>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <description><![CDATA[Use this tag to mark out content to replace a netui-template:includeSection within a template file.]]></description>
+        <name>section</name>
+        <tag-class>org.apache.beehive.netui.tags.template.Section</tag-class>
+
+        <attribute>
+            <description><![CDATA[The name of the content to fill the placeholder.]]></description>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <description><![CDATA[Determines if the section is visible.]]></description>
+            <name>visible</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <description><![CDATA[Use this tag to set the value of an netui-template:attribute element in a template file.]]></description>
+        <name>setAttribute</name>
+        <tag-class>org.apache.beehive.netui.tags.template.SetAttribute</tag-class>
+
+        <attribute>
+            <description><![CDATA[The name of the attribute to set.]]></description>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <description><![CDATA[Sets the value of the attribute.]]></description>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <description><![CDATA[Use this tag to associate a JSP page with a particular template file.]]></description>
+        <name>template</name>
+        <tag-class>org.apache.beehive.netui.tags.template.Template</tag-class>
+
+        <attribute>
+            <description><![CDATA[Set the document type (html4-loose or xhtml1-transitional) of the document.]]></description>
+            <name>documentType</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <description><![CDATA[Determines if the template should report errors. The errors will be reported inline on the JSP page.]]></description>
+            <name>reportErrors</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+        <attribute>
+            <description><![CDATA[The URL of the template page to use.]]></description>
+            <name>templatePage</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+
+</taglib>
+

@@ -1,0 +1,41 @@
+Fri Mar 25 13:08:59 PST 2005  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
+Fri Mar 25 13:08:59 PST 2005   [info] ************************************************************** 
+Fri Mar 25 13:08:59 PST 2005   [info] Starting Jakarta Velocity v1.4
+Fri Mar 25 13:08:59 PST 2005   [info] RuntimeInstance initializing.
+Fri Mar 25 13:08:59 PST 2005   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Fri Mar 25 13:08:59 PST 2005   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Fri Mar 25 13:08:59 PST 2005   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Fri Mar 25 13:08:59 PST 2005   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Fri Mar 25 13:08:59 PST 2005   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Fri Mar 25 13:08:59 PST 2005   [info] ClasspathResourceLoader : initialization starting.
+Fri Mar 25 13:08:59 PST 2005   [info] ClasspathResourceLoader : initialization complete.
+Fri Mar 25 13:08:59 PST 2005   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Fri Mar 25 13:08:59 PST 2005   [info] Default ResourceManager initialization complete.
+Fri Mar 25 13:08:59 PST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Fri Mar 25 13:08:59 PST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Fri Mar 25 13:08:59 PST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Fri Mar 25 13:08:59 PST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Fri Mar 25 13:08:59 PST 2005   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Fri Mar 25 13:08:59 PST 2005   [info] Created: 20 parsers.
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : initialization starting.
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : adding VMs from VM library template : org/apache/beehive/controls/runtime/generator/ControlMacros.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #toObject( type ) : source = org/apache/beehive/controls/runtime/generator/ControlMacros.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #declareMethodStatics( ) : source = org/apache/beehive/controls/runtime/generator/ControlMacros.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #initMethodStatics( ) : source = org/apache/beehive/controls/runtime/generator/ControlMacros.vm
+Fri Mar 25 13:08:59 PST 2005   [info] ResourceManager : found org/apache/beehive/controls/runtime/generator/ControlMacros.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro :  VM library template macro registration complete.
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : messages on  : VM system will output logging messages
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : initialization complete.
+Fri Mar 25 13:08:59 PST 2005   [info] Velocity successfully started.
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #declareReflectFields( ) : source = org/apache/beehive/controls/runtime/generator/ClientInitializer.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #initReflectFields( ) : source = org/apache/beehive/controls/runtime/generator/ClientInitializer.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #declareEventAdaptor( adaptor ) : source = org/apache/beehive/controls/runtime/generator/ClientInitializer.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #declareEventAdaptors( ) : source = org/apache/beehive/controls/runtime/generator/ClientInitializer.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #initEventAdaptors( control ) : source = org/apache/beehive/controls/runtime/generator/ClientInitializer.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #initControl( control ) : source = org/apache/beehive/controls/runtime/generator/ClientInitializer.vm
+Fri Mar 25 13:08:59 PST 2005   [info] Velocimacro : added new VM : #declareFieldInit( ) : source = org/apache/beehive/controls/runtime/generator/ClientInitializer.vm
+Fri Mar 25 13:08:59 PST 2005   [info] ResourceManager : found org/apache/beehive/controls/runtime/generator/ClientInitializer.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader

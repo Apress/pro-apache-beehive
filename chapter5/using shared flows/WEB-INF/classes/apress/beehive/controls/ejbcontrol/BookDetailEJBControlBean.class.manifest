@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+
+Name: apress/beehive/controls/ejbcontrol/BookDetailEJBControlBean.class
+JavaBean: true

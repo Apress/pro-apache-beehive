@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Generated from /WEB-INF/src/global/Global.app on Thu Dec 30 14:21:15 PST 2004-->
+<struts-config>
+  <form-beans/>
+  <global-exceptions>
+    <exception type="java.lang.Exception" key="" handler="handleException" className="org.apache.beehive.netui.pageflow.config.PageFlowExceptionConfig">
+      <set-property property="isHandlerMethod" value="true"/>
+    </exception>
+    <exception type="org.apache.beehive.netui.pageflow.PageFlowException" key="" handler="handlePageFlowException" className="org.apache.beehive.netui.pageflow.config.PageFlowExceptionConfig">
+      <set-property property="isHandlerMethod" value="true"/>
+    </exception>
+  </global-exceptions>
+  <global-forwards>
+    <!--forward "errorPage" from exception-handler handleException-->
+    <forward name="errorPage" path="/error.jsp" contextRelative="true"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/home" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="global.Global" scope="request" validate="false">
+      <forward name="home" path="/Controller.jpf" contextRelative="true"/>
+    </action>
+  </action-mappings>
+  <controller processorClass="org.apache.beehive.netui.pageflow.PageFlowRequestProcessor" inputForward="true" className="org.apache.beehive.netui.pageflow.config.PageFlowControllerConfig">
+    <set-property property="isSharedFlow" value="true"/>
+    <set-property property="isReturnToPageDisabled" value="true"/>
+    <set-property property="isReturnToActionDisabled" value="true"/>
+    <set-property property="controllerClass" value="global.Global"/>
+    <set-property property="isMissingDefaultMessages" value="true"/>
+  </controller>
+  <message-resources key="_defaultValidationMessages" parameter="org.apache.beehive.netui.pageflow.validation.defaultMessages" null="true"/>
+</struts-config>

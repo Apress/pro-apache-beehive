@@ -1,0 +1,41 @@
+<xs:schema
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:bk="http://beehive.apress.com/bookstore/vo"
+   targetNamespace="http://beehive.apress.com/bookstore/vo"
+   elementFormDefault="qualified">
+
+  <xs:element name="bookDetail">
+    <xs:complexType>
+      <xs:sequence>
+       <xs:element name="book_Id" type="xs:int"/>
+       <xs:element name="title" type="xs:string"/>
+       <xs:element name="book_type" type="xs:string"/>
+       <xs:element name="author" type="xs:string"/>
+       <xs:element name="publication" type="xs:string"/>
+       <xs:element name="publication_Date" type="xs:date"/>
+       <xs:element name="catalogNo" type="xs:string"/>
+       <xs:element name="isbn" type="xs:string"/>
+       <xs:element name="price" type="xs:string"/>
+       <xs:element name="comments" type="xs:string"/>
+       
+       <xs:element name="pages" type="xs:int"/>
+       <xs:element name="available" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="publisher">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="address" type="xs:string"/>
+    </xs:sequence>
+    </xs:complexType>
+
+  <xs:complexType name="author">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+ </xs:schema>

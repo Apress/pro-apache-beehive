@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<netui-config xmlns="http://beehive.apache.org/netui/2004/server/config">
+
+    <legacy-tag-support>false</legacy-tag-support>
+
+    <expression-languages>
+        <default-language>netuiel</default-language>
+        <expression-language>
+            <name>netuiel</name>
+            <factory-class>org.apache.beehive.netui.script.el.ExpressionEvaluatorImpl$NetUIELEngineFactory</factory-class>
+            <binding-contexts>
+                <binding-context>
+                    <name>bundle</name>
+                    <factory-class>org.apache.beehive.netui.databinding.script.el.BundleVariableResolver$BundleContextFactory</factory-class>
+                </binding-context>
+                <binding-context>
+                    <name>container</name>
+                    <factory-class>org.apache.beehive.netui.databinding.script.el.ContainerVariableResolver$ContainerContextFactory</factory-class>
+                </binding-context>
+            </binding-contexts>
+        </expression-language>
+    </expression-languages>
+
+    <iterator-factories>
+    </iterator-factories>
+
+</netui-config>

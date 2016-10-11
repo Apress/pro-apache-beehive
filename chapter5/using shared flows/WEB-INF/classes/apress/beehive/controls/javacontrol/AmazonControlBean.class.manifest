@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+
+Name: apress/beehive/controls/javacontrol/AmazonControlBean.class
+JavaBean: true

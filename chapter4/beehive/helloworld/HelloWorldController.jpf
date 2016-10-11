@@ -1,0 +1,59 @@
+
+
+import org.apache.beehive.netui.pageflow.PageFlowController;
+import org.apache.beehive.netui.pageflow.annotations.Jpf;
+import org.apache.beehive.netui.pageflow.Forward;
+
+import helloworld.forms.LoginForm;
+
+
+@Jpf.Controller (
+
+	simpleActions= {
+		
+		@Jpf.SimpleAction (name="cancel", path="begin.do")
+		}
+)
+
+
+public class HelloWorldController extends PageFlowController
+
+{
+
+@Jpf.Action (
+	forwards= {
+		@Jpf.Forward (name="success", path="helloworld.jsp")
+		}
+	)
+ public Forward begin()
+ 
+ {
+ 	return new Forward("success");
+ }
+
+
+@Jpf.Action (
+ 	forwards= {
+ 		@Jpf.Forward (name="success", path="login.jsp")
+ 		}
+ 	)
+  public Forward showLoginPage()
+  
+ {
+  	return new Forward("success");
+ }
+ 
+ @Jpf.Action(
+         forwards = { 
+             @Jpf.Forward(name = "success", path = "success.jsp")
+         }
+     )
+     public Forward processLogin(LoginForm form)
+     {
+         System.out.println("User Name: " + form.getUsername());
+         System.out.println("Password: " + form.getPassword());
+         return new Forward("success");
+     }
+
+
+}

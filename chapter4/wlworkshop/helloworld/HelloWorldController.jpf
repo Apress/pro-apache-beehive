@@ -1,0 +1,50 @@
+package helloworld;
+import com.bea.wlw.netui.pageflow.Forward;
+import com.bea.wlw.netui.pageflow.PageFlowController;
+
+/**
+ * @jpf:controller
+ * @jpf:view-properties view-properties::
+ * <!-- This data is auto-generated. Hand-editing this section is not recommended. -->
+ * <view-properties>
+ * <pageflow-object id="pageflow:/helloworld/HelloWorldController.jpf"/>
+ * <pageflow-object id="action:begin.do">
+ *   <property value="80" name="x"/>
+ *   <property value="100" name="y"/>
+ * </pageflow-object>
+ * <pageflow-object id="forward:path#success#helloworld.jsp#@action:begin.do@">
+ *   <property value="44,20,20,60" name="elbowsX"/>
+ *   <property value="92,92,-4,-4" name="elbowsY"/>
+ *   <property value="West_1" name="fromPort"/>
+ *   <property value="North_1" name="toPort"/>
+ *   <property value="success" name="label"/>
+ * </pageflow-object>
+ * <pageflow-object id="page:helloworld.jsp">
+ *   <property value="60" name="x"/>
+ *   <property value="40" name="y"/>
+ * </pageflow-object>
+ * </view-properties>
+ * ::
+ */
+public class HelloWorldController extends PageFlowController
+{
+
+
+    // Uncomment this declaration to access Global.app.
+    // 
+    //     protected global.Global globalApp;
+    // 
+
+    // For an example of page flow exception handling see the example "catch" and "exception-handler"
+    // annotations in {project}/WEB-INF/src/global/Global.app
+
+    /**
+     * This method represents the point of entry into the pageflow
+     * @jpf:action
+     * @jpf:forward name="success" path="helloworld.jsp"
+     */
+    protected Forward begin()
+    {
+        return new Forward("success");
+    }
+}

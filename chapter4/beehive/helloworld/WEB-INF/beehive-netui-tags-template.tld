@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>netui-template</short-name>
+
+    <uri>http://beehive.apache.org/netui/tags-template-1.0</uri>
+
+    <description><![CDATA[NetUI Template controls taglibrary.]]></description>
+
+    <tag>
+
+        <name>attribute</name>
+        <tag-class>org.apache.beehive.netui.tags.template.Attribute</tag-class>
+        <description><![CDATA[Place this tag in a template file, and then set its value with the netui-template:setAttribute tag.]]></description>
+
+        <attribute>
+            <name>defaultValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[The default value for <netui-template:attribute> placeholder.]]></description>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[The name for the &lt;netui-template:attribute> placeholder. The name may be used more than once in a template page.]]></description>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <name>divPanel</name>
+        <tag-class>org.apache.beehive.netui.tags.template.DivPanel</tag-class>
+        <description><![CDATA[A divPanel is an placeholder which may contain multiple sections. Only a single section will be visible at a time.]]></description>
+
+        <attribute>
+            <name>firstPage</name>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[Set the name of the first page to display.]]></description>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[Set the ID of the tag.]]></description>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <name>includeSection</name>
+        <tag-class>org.apache.beehive.netui.tags.template.IncludeSection</tag-class>
+        <description><![CDATA[Include this tag in a template file to mark out content that will be used in another JSP page.]]></description>
+
+        <attribute>
+            <name>defaultPage</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[A default JSP page to provide content for the placeholder if the content page fails to define the content.]]></description>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[The name of the section. This name must be unique within the template page.]]></description>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <name>section</name>
+        <tag-class>org.apache.beehive.netui.tags.template.Section</tag-class>
+        <description><![CDATA[Use this tag to mark out content to replace a netui-template:includeSection within a template file.]]></description>
+
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[The name of the content to fill the placeholder.]]></description>
+        </attribute>
+
+        <attribute>
+            <name>visible</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+            <description><![CDATA[Determines if the section is visible.]]></description>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <name>setAttribute</name>
+        <tag-class>org.apache.beehive.netui.tags.template.SetAttribute</tag-class>
+        <description><![CDATA[Use this tag to set the value of an netui-template:attribute element in a template file.]]></description>
+
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[The name of the attribute to set.]]></description>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[Sets the value of the attribute.]]></description>
+        </attribute>
+
+    </tag>
+    <tag>
+
+        <name>template</name>
+        <tag-class>org.apache.beehive.netui.tags.template.Template</tag-class>
+        <description><![CDATA[Use this tag to associate a JSP page with a particular template file.]]></description>
+
+        <attribute>
+            <name>reportErrors</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[Determines if the template should report errors. The errors will be reported inline on the JSP page.]]></description>
+        </attribute>
+
+        <attribute>
+            <name>templatePage</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description><![CDATA[The URL of the template page to use.]]></description>
+        </attribute>
+
+    </tag>
+</taglib>
+

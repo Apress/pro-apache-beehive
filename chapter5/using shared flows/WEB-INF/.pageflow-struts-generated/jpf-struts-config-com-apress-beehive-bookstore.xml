@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Generated from /WEB-INF/.tmpbeansrc/com/apress/beehive/bookstore/BookController.java on Sat Jun 04 09:41:03 PDT 2005-->
+<struts-config>
+  <form-beans>
+    <form-bean name="bookForm" type="com.apress.beehive.bookstore.BookForm"/>
+    <form-bean name="amazonSearchForm" type="com.apress.beehive.bookstore.AmazonSearchForm"/>
+  </form-beans>
+  <global-exceptions/>
+  <global-forwards>
+    <forward name="_auto" path=""/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/addBook" name="bookForm" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" input="failure" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="true">
+      <forward name="success" path="/viewBook.jsp"/>
+      <!--forward "failure" (validationErrorForward)-->
+      <forward name="failure" path="currentPage" className="org.apache.beehive.netui.pageflow.config.PageFlowActionForward">
+        <set-property property="returnToPage" value="true"/>
+      </forward>
+    </action>
+    <action path="/begin" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/index.jsp"/>
+    </action>
+    <action path="/getBookDetails" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/viewBook.jsp"/>
+    </action>
+    <action path="/getBookRowset" name="bookForm" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/booksGrid.jsp"/>
+    </action>
+    <action path="/searchAWS" name="amazonSearchForm" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/amazonResults.jsp"/>
+    </action>
+    <action path="/searchAmazon" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/searchAmazon.jsp"/>
+    </action>
+    <action path="/showAddBookPage" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/addBook.jsp"/>
+    </action>
+    <action path="/showSearchBookPage" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/searchBook.jsp"/>
+    </action>
+    <action path="/submitForm" name="bookForm" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/index.jsp"/>
+    </action>
+    <action path="/submitSearchBook" name="bookForm" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="com.apress.beehive.bookstore.BookController" scope="request" validate="false">
+      <forward name="success" path="/books.jsp"/>
+    </action>
+  </action-mappings>
+  <controller processorClass="org.apache.beehive.netui.pageflow.PageFlowRequestProcessor" inputForward="true" className="org.apache.beehive.netui.pageflow.config.PageFlowControllerConfig">
+    <set-property property="isReturnToActionDisabled" value="true"/>
+    <set-property property="sharedFlows" value="booksharedFlow=com.apress.beehive.bookstore.BookSharedFlow"/>
+    <set-property property="controllerClass" value="com.apress.beehive.bookstore.BookController"/>
+  </controller>
+  <message-resources key="_defaultValidationMessages" parameter="org.apache.beehive.netui.pageflow.validation.defaultMessages" null="true"/>
+  <message-resources parameter="apress.beehive.messages.bookstore" null="true"/>
+</struts-config>

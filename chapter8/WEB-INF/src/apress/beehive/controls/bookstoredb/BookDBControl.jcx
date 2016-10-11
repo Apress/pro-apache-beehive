@@ -1,0 +1,29 @@
+package apress.beehive.controls.bookstoredb;
+
+import com.apress.beehive.bookstore.vo.BookDetailDocument;
+import org.apache.beehive.controls.api.bean.ControlExtension;
+import org.controlhaus.jdbc.JdbcControl;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+@ControlExtension
+        @JdbcControl.ConnectionDataSource(jndiName = "java:/bookstoreDS")
+        public interface BookDBControl extends JdbcControl {
+
+    @JdbcControl.SQL(statement = " ", maxRows = 1)
+            public void addBook();
+
+    @JdbcControl.SQL(statement = "select title from book where author_name={name}", maxRows = 10)
+            public String[] getAllBooksTitlesForAuthor(String name);
+
+   @JdbcControl.SQL(statement = "SELECT * FROM book_detail WHERE book_id={book_Id}", maxRows = 1)
+            public BookDetailDocument.BookDetail getBookDetails(int book_Id) throws SQLException;
+
+    @JdbcControl.SQL(statement = "SELECT * FROM book_detail WHERE book_type= {type}  ", maxRows = 10)
+            public ResultSet findBooksByAuthorAndType(String author, String type) throws SQLException;
+
+
+    static final long serialVersionUID = 1L;
+
+}

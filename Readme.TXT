@@ -1,0 +1,1 @@
+See Appendix A, and the sidebars in each chapter on how and when to use this code.

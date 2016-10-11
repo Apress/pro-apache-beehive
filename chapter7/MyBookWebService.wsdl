@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://wscontrol.controls.beehive.apress" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://wscontrol.controls.beehive.apress" xmlns:intf="http://wscontrol.controls.beehive.apress" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://lang.java" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.2RC3
+Built on Feb 28, 2005 (10:15:14 EST)-->
+ <wsdl:types>
+  <schema targetNamespace="http://wscontrol.controls.beehive.apress" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://lang.java"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="Book">
+    <sequence>
+     <element name="author" nillable="true" type="xsd:string"/>
+     <element name="available" nillable="true" type="xsd:boolean"/>
+     <element name="book_Id" nillable="true" type="xsd:int"/>
+     <element name="book_type" nillable="true" type="xsd:string"/>
+     <element name="catalogNo" nillable="true" type="xsd:string"/>
+     <element name="comments" nillable="true" type="xsd:string"/>
+     <element name="isbn" nillable="true" type="xsd:string"/>
+     <element name="pages" nillable="true" type="xsd:int"/>
+     <element name="price" nillable="true" type="xsd:string"/>
+     <element name="publication" nillable="true" type="xsd:string"/>
+     <element name="publication_Date" nillable="true" type="xsd:string"/>
+     <element name="title" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="IOException">
+    <sequence/>
+   </complexType>
+   <complexType name="RemoteException">
+    <complexContent>
+     <extension base="impl:IOException">
+      <sequence>
+       <element name="cause" nillable="true" type="xsd:anyType"/>
+       <element name="message" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="SQLException">
+    <sequence>
+     <element name="SQLState" nillable="true" type="xsd:string"/>
+     <element name="errorCode" nillable="true" type="xsd:int"/>
+     <element name="nextException" nillable="true" type="impl:SQLException"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+  <wsdl:message name="getAmazonURLForBookRequest">
+     <wsdl:part name="bookISBN" type="soapenc:string"/>
+  </wsdl:message>
+  <wsdl:message name="printHelloRequest">
+     <wsdl:part name="name" type="soapenc:string"/>
+  </wsdl:message>
+  <wsdl:message name="SQLException">
+     <wsdl:part name="SQLException" type="impl:SQLException"/>
+  </wsdl:message>
+  <wsdl:message name="RemoteException">
+     <wsdl:part name="RemoteException" type="impl:RemoteException"/>
+  </wsdl:message>
+  <wsdl:message name="addBookResponse">
+     <wsdl:part name="result" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getAmazonURLForBookResponse">
+     <wsdl:part name="result" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getGreetingRequest">
+  </wsdl:message>
+  <wsdl:message name="getGreetingResponse">
+     <wsdl:part name="greetings" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="addBookRequest">
+     <wsdl:part name="book" type="impl:Book"/>
+  </wsdl:message>
+  <wsdl:portType name="LibraryWebService">
+     <wsdl:operation name="addBook" parameterOrder="book">
+        <wsdl:input message="impl:addBookRequest" name="addBookRequest"/>
+        <wsdl:output message="impl:addBookResponse" name="addBookResponse"/>
+        <wsdl:fault message="impl:SQLException" name="SQLException"/>
+        <wsdl:fault message="impl:RemoteException" name="RemoteException"/>
+     </wsdl:operation>
+     <wsdl:operation name="getGreeting">
+        <wsdl:input message="impl:getGreetingRequest" name="getGreetingRequest"/>
+        <wsdl:output message="impl:getGreetingResponse" name="getGreetingResponse"/>
+     </wsdl:operation>
+     <wsdl:operation name="printHello" parameterOrder="name">
+        <wsdl:input message="impl:printHelloRequest" name="printHelloRequest"/>
+     </wsdl:operation>
+     <wsdl:operation name="getAmazonURLForBook" parameterOrder="bookISBN">
+        <wsdl:input message="impl:getAmazonURLForBookRequest" name="getAmazonURLForBookRequest"/>
+        <wsdl:output message="impl:getAmazonURLForBookResponse" name="getAmazonURLForBookResponse"/>
+        <wsdl:fault message="impl:RemoteException" name="RemoteException"/>
+     </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LibraryWebServiceSoapBinding" type="impl:LibraryWebService">
+     <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+     <wsdl:operation name="addBook">
+        <wsdlsoap:operation soapAction=""/>
+        <wsdl:input name="addBookRequest">
+           <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:input>
+        <wsdl:output name="addBookResponse">
+           <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:output>
+        <wsdl:fault name="SQLException">
+           <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="SQLException" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:fault>
+        <wsdl:fault name="RemoteException">
+           <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RemoteException" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:fault>
+     </wsdl:operation>
+     <wsdl:operation name="getGreeting">
+        <wsdlsoap:operation soapAction=""/>
+        <wsdl:input name="getGreetingRequest">
+           <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:input>
+        <wsdl:output name="getGreetingResponse">
+           <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:output>
+     </wsdl:operation>
+     <wsdl:operation name="printHello">
+        <wsdlsoap:operation soapAction="urn:printHello1"/>
+        <wsdl:input name="printHelloRequest">
+           <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:input>
+     </wsdl:operation>
+     <wsdl:operation name="getAmazonURLForBook">
+        <wsdlsoap:operation soapAction=""/>
+        <wsdl:input name="getAmazonURLForBookRequest">
+           <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:input>
+        <wsdl:output name="getAmazonURLForBookResponse">
+           <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:output>
+        <wsdl:fault name="RemoteException">
+           <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="RemoteException" namespace="http://wscontrol.controls.beehive.apress" use="encoded"/>
+        </wsdl:fault>
+     </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LibraryService">
+     <wsdl:port binding="impl:LibraryWebServiceSoapBinding" name="LibraryWebService">
+        <wsdlsoap:address location="http://192.168.5.101:8080/Library/apress/beehive/controls/wscontrol/MyBookWebService.jws"/>
+     </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

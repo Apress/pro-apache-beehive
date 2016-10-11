@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib>
+    <uri>http://beehive.apache.org/netui/tags-databinding-1.0</uri>
+    <palettegenerator>workshop.netui.jspdesigner.generators.NetuiDatabindingPaletteGenerator</palettegenerator>
+    <link>
+        <prefix>netui</prefix>
+        <uri>http://beehive.apache.org/netui/tags-html-1.0</uri>
+    </link>
+    <link>
+        <prefix>temp</prefix>
+        <uri>http://beehive.apache.org/netui/tags-template-1.0</uri>
+    </link>
+
+    <tag>
+        <name>anchorColumn</name>
+        <renderer>workshop.netui.jspdesigner.tldx.AnchorColumnRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>action</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>headerText</name>
+        </attribute>
+
+        <attribute>
+            <name>href</name>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>scope</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>callMethod</name>
+        <requiredchild>methodParameter</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.CallMethodRenderer</renderer>
+
+        <attribute>
+            <name>failOnError</name>
+        </attribute>
+
+        <attribute>
+            <name>method</name>
+        </attribute>
+
+        <attribute>
+            <name>object</name>
+        </attribute>
+
+        <attribute>
+            <name>resultId</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>callPageFlow</name>
+        <requiredchild>methodParameter</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.compat.CallPageFlowRenderer</renderer>
+        <deprecated>true</deprecated>
+
+        <attribute>
+            <name>failOnError</name>
+        </attribute>
+
+        <attribute>
+            <name>method</name>
+        </attribute>
+
+        <attribute>
+            <name>object</name>
+        </attribute>
+
+        <attribute>
+            <name>resultId</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>caption</name>
+        <renderer></renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>cellRepeater</name>
+        <renderer>workshop.netui.jspdesigner.tldx.CellRepeaterRenderer</renderer>
+
+        <attribute>
+            <name>alternatingCellClass</name>
+        </attribute>
+
+        <attribute>
+            <name>cellClass</name>
+        </attribute>
+
+        <attribute>
+            <name>columns</name>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>rowClass</name>
+        </attribute>
+
+        <attribute>
+            <name>rows</name>
+        </attribute>
+
+        <attribute>
+            <name>tableClass</name>
+        </attribute>
+
+        <attribute>
+            <name>verticalRepeat</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>columns</name>
+        <requiredparent>dataGrid</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.ColumnsRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>configurePager</name>
+        <renderer></renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>pageAction</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>pageHref</name>
+        </attribute>
+
+        <attribute>
+            <name>pageSize</name>
+        </attribute>
+
+        <attribute>
+            <name>pagerFormat</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>dataGrid</name>
+        <renderer>workshop.netui.jspdesigner.tldx.GridRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>cssClassPolicy</name>
+        </attribute>
+
+        <attribute>
+            <name>cssClassPrefix</name>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>disableDefaultPager</name>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>declareBundle</name>
+        <renderer>workshop.netui.jspdesigner.tldx.DeclareBundleRenderer</renderer>
+
+        <attribute>
+            <name>bundlePath</name>
+        </attribute>
+
+        <attribute>
+            <name>country</name>
+        </attribute>
+
+        <attribute>
+            <name>language</name>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>variant</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>declarePageInput</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.DeclarePageInputRenderer</renderer>
+        <bodycontent-pref>empty</bodycontent-pref>
+        <expressioninfo>workshop.netui.jspdesigner.tldx.expression.NetuiPageInputExpressionInfo</expressioninfo>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>required</name>
+        </attribute>
+
+        <attribute>
+            <name>type</name>
+            <extype>java-classname</extype>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>footer</name>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>getData</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.GetDataRenderer</renderer>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>resultId</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>imageColumn</name>
+        <renderer>workshop.netui.jspdesigner.tldx.ImageColumnRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>align</name>
+        </attribute>
+
+        <attribute>
+            <name>border</name>
+        </attribute>
+
+        <attribute>
+            <name>headerText</name>
+        </attribute>
+
+        <attribute>
+            <name>height</name>
+        </attribute>
+
+        <attribute>
+            <name>hspace</name>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>src</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>vspace</name>
+        </attribute>
+
+        <attribute>
+            <name>width</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>literalColumn</name>
+        <renderer>workshop.netui.jspdesigner.tldx.LiteralColumnRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>headerText</name>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>message</name>
+        <requiredchild>messageArg</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.MessageRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>resultId</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>messageArg</name>
+        <requiredparent>message</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.MessageArgRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>methodParameter</name>
+        <requiredparent>choiceMethod callPageFlow callControl callMethod</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.MethodParameterRenderer</renderer>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>null</name>
+        </attribute>
+
+        <attribute>
+            <name>type</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>pad</name>
+        <requiredparent>repeater</requiredparent>
+        <whitespace>indent</whitespace>
+        <output><![CDATA[|$children|]]></output>
+
+        <attribute>
+            <name>maxRepeat</name>
+        </attribute>
+
+        <attribute>
+            <name>minRepeat</name>
+        </attribute>
+
+        <attribute>
+            <name>padText</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>renderPager</name>
+        <renderer></renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>repeater</name>
+        <renderer>workshop.netui.jspdesigner.tldx.RepeaterRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <expressioninfo>workshop.netui.jspdesigner.tldx.expression.NetuiContainerExpressionInfo</expressioninfo>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>defaultText</name>
+        </attribute>
+
+        <attribute>
+            <name>ignoreNulls</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>repeaterFooter</name>
+        <requiredparent>repeater</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.RepeaterFooterRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>repeaterHeader</name>
+        <requiredparent>repeater</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.RepeaterHeaderRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>repeaterItem</name>
+        <requiredparent>repeater</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.RepeaterItemRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>serializeXML</name>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>divName</name>
+        </attribute>
+
+        <attribute>
+            <name>source</name>
+        </attribute>
+
+    </tag>
+
+</taglib>

@@ -1,0 +1,103 @@
+package apress.beehive.databinding;
+
+import org.apache.beehive.netui.pageflow.PageFlowController;
+import org.apache.beehive.netui.pageflow.Forward;
+import org.apache.beehive.netui.pageflow.FormData;
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.apache.beehive.netui.pageflow.annotations.Jpf;
+
+@Jpf.Controller
+public class Controller extends PageFlowController {
+
+	private String value1;
+	private String value2;
+	private Date today;
+
+	private Map persons=new LinkedHashMap();
+
+	@Jpf.Action(forwards = { @Jpf.Forward(name = "success", path = "index.jsp") })
+
+	public Forward begin() {
+		this.getDate();
+		this.setValue1("3334445555");
+		this.setValue2("John");
+		return new Forward("success");
+	}
+
+
+	@Jpf.Action(forwards = { @Jpf.Forward(name = "success", path = "databinding.jsp") })
+	public Forward submitDatabinding() {
+		this.populatePersons();
+		return new Forward("success");
+	}
+
+
+
+	public void setValue1(String value1) {
+		this.value1 = value1;
+	}
+
+	public String getValue1() {
+		return this.value1;
+	}
+
+	public void setValue2(String value1) {
+		this.value2 = value1;
+	}
+
+	public String getValue2() {
+		return this.value2;
+	}
+
+	public Date getDate() {
+		 today = new java.util.Date();
+		return today;
+	}
+
+	public void setToday(Date value1) {
+		this.today = value1;
+	}
+
+	public Date getToday() {
+		return this.today;
+	}
+
+	public void setPersons(Map value1) {
+		this.persons = value1;
+	}
+
+	public Map getPersons() {
+		return this.persons;
+	}
+
+	public String getStateName(String acronym)
+	{
+		if(acronym.equalsIgnoreCase("ca"))
+		{
+			return "California";
+		}
+		else if(acronym.equalsIgnoreCase("NY"))
+		{
+			return "New York";
+		}
+		else {
+			return "Unknown";
+		}
+
+	}
+
+	private void populatePersons()
+	{
+	Person aPerson = new Person("1","Kunal","Mittal","310-665-6693","kunal@kunalmittal.com","ca");
+	persons.put(aPerson.getId(),aPerson);
+	aPerson = new Person("2","Srini","kanchanavally","310-665-6691","srini@srinik.com","ny");
+	persons.put(aPerson.getId(),aPerson);
+	aPerson = new Person("3","Chris","verosy","310-665-6692","chris@chrisverosy.com","ca");
+	persons.put(aPerson.getId(),aPerson);
+	aPerson = new Person("4","Michael","Morett","310-665-6695","michael@mm.com","asdf");
+	persons.put(aPerson.getId(),aPerson);
+	}
+}

@@ -1,0 +1,3979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib>
+    <uri>http://beehive.apache.org/netui/tags-html-1.0</uri>
+    <palettegenerator>workshop.netui.jspdesigner.generators.NetuiPaletteGenerator</palettegenerator>
+    <link>
+        <prefix>data</prefix>
+        <uri>http://beehive.apache.org/netui/tags-databinding-1.0</uri>
+    </link>
+    <link>
+        <prefix>temp</prefix>
+        <uri>http://beehive.apache.org/netui/tags-template-1.0</uri>
+    </link>
+    <link>
+        <prefix>datagrid</prefix>
+        <uri>null</uri>
+    </link>
+
+    <tag>
+        <name>anchor</name>
+        <renderer>workshop.netui.jspdesigner.tldx.AnchorRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>action</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>charSet</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>clientAction</name>
+        </attribute>
+
+        <attribute>
+            <name>coords</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disableSecondClick</name>
+        </attribute>
+
+        <attribute>
+            <name>formSubmit</name>
+        </attribute>
+
+        <attribute>
+            <name>href</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+            <reftype>url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>hrefLang</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>linkName</name>
+        </attribute>
+
+        <attribute>
+            <name>location</name>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>popup</name>
+        </attribute>
+
+        <attribute>
+            <name>rel</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>rev</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>shape</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>target</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>targetScope</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>type</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>area</name>
+        <renderer>workshop.netui.jspdesigner.tldx.AreaRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>action</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+        </attribute>
+
+        <attribute>
+            <name>coords</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disableSecondClick</name>
+        </attribute>
+
+        <attribute>
+            <name>formSubmit</name>
+        </attribute>
+
+        <attribute>
+            <name>href</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+            <reftype>url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>location</name>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>popup</name>
+        </attribute>
+
+        <attribute>
+            <name>shape</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>targetScope</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>attribute</name>
+        <requiredparent>data:anchorColumn data:imageColumn data:literalColumn</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.AttributeRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>facet</name>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>base</name>
+        <requiredchild>attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.BaseRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>target</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>behavior</name>
+        <renderer>workshop.netui.jspdesigner.tldx.AttributeRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>facet</name>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>bindingUpdateErrors</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.BindingUpdateErrorsRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>alwaysReport</name>
+        </attribute>
+
+        <attribute>
+            <name>expression</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>body</name>
+        <renderer>workshop.netui.jspdesigner.tldx.BodyRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>alink</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>background</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>bgcolor</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>link</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onLoad</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onUnload</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>text</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>vlink</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>button</name>
+        <requiredchild>parameter parameterMap, attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ButtonRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>action</name>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disableSecondClick</name>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>popup</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>targetScope</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>type</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>checkBox</name>
+        <requiredchild>attribute</requiredchild>
+        <illegalancestor>checkBoxGroup</illegalancestor>
+        <renderer>workshop.netui.jspdesigner.tldx.CheckboxRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>checkBoxGroup</name>
+        <renderer>workshop.netui.jspdesigner.tldx.CheckboxGroupRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>labelStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>labelStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>optionsDataSource</name>
+        </attribute>
+
+        <attribute>
+            <name>orientation</name>
+        </attribute>
+
+        <attribute>
+            <name>repeater</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>checkBoxOption</name>
+        <requiredparent>checkBoxGroup</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.CheckboxOptionRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>labelStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>labelStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>configurePopup</name>
+        <requiredparent>anchor button form image imageAnchor data:anchorColumn</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>directories</name>
+        </attribute>
+
+        <attribute>
+            <name>height</name>
+        </attribute>
+
+        <attribute>
+            <name>left</name>
+        </attribute>
+
+        <attribute>
+            <name>location</name>
+        </attribute>
+
+        <attribute>
+            <name>menubar</name>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>onPopupDone</name>
+        </attribute>
+
+        <attribute>
+            <name>popupFunc</name>
+        </attribute>
+
+        <attribute>
+            <name>replace</name>
+        </attribute>
+
+        <attribute>
+            <name>resizable</name>
+        </attribute>
+
+        <attribute>
+            <name>scrollbars</name>
+        </attribute>
+
+        <attribute>
+            <name>status</name>
+        </attribute>
+
+        <attribute>
+            <name>toolbar</name>
+        </attribute>
+
+        <attribute>
+            <name>top</name>
+        </attribute>
+
+        <attribute>
+            <name>width</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>content</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ContentRenderer</renderer>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>divPanel</name>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>firstPage</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>error</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ErrorRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>bundle</name>
+        </attribute>
+
+        <attribute>
+            <name>bundleName</name>
+        </attribute>
+
+        <attribute>
+            <name>key</name>
+        </attribute>
+
+        <attribute>
+            <name>locale</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>errors</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ErrorsRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>bundle</name>
+        </attribute>
+
+        <attribute>
+            <name>bundleName</name>
+        </attribute>
+
+        <attribute>
+            <name>locale</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>exceptions</name>
+        <renderer>workshop.netui.jspdesigner.tldx.ExceptionsRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>showDevModeStackTrace</name>
+        </attribute>
+
+        <attribute>
+            <name>showMessage</name>
+        </attribute>
+
+        <attribute>
+            <name>showStackTrace</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>fileUpload</name>
+        <requiredchild>attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.FileUploadRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>accept</name>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>readonly</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>size</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>form</name>
+        <illegalancestor>form</illegalancestor>
+        <renderer>workshop.netui.jspdesigner.tldx.FormRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <expressioninfo>workshop.netui.jspdesigner.tldx.expression.NetuiActionFormExpressionInfo</expressioninfo>
+
+        <attribute>
+            <name>action</name>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>beanName</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>beanScope</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>beanType</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>enctype</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>focus</name>
+        </attribute>
+
+        <attribute>
+            <name>genJavaScriptFormSubmit</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>location</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>method</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onReset</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSubmit</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>target</name>
+        </attribute>
+
+        <attribute>
+            <name>targetScope</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>formatDate</name>
+        <requiredparent>label span select textArea textBox data:anchorColumn data:literalColumn</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.FormatDateRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>country</name>
+        </attribute>
+
+        <attribute>
+            <name>language</name>
+        </attribute>
+
+        <attribute>
+            <name>pattern</name>
+        </attribute>
+
+        <attribute>
+            <name>stringInputPattern</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>formatNumber</name>
+        <requiredparent>label span select textArea textBox data:anchorColumn data:literalColumn</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.FormatNumberRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>country</name>
+        </attribute>
+
+        <attribute>
+            <name>language</name>
+        </attribute>
+
+        <attribute>
+            <name>pattern</name>
+        </attribute>
+
+        <attribute>
+            <name>type</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>formatString</name>
+        <requiredparent>label span select textArea textBox data:anchorColumn data:literalColumn</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.FormatStringRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>country</name>
+        </attribute>
+
+        <attribute>
+            <name>language</name>
+        </attribute>
+
+        <attribute>
+            <name>pattern</name>
+        </attribute>
+
+        <attribute>
+            <name>truncate</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>hidden</name>
+        <requiredchild>attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.HiddenRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>dataInput</name>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>html</name>
+        <renderer>workshop.netui.jspdesigner.tldx.HtmlRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+        <output><![CDATA[<html>|$children|</html>]]></output>
+
+        <attribute>
+            <name>dir</name>
+        </attribute>
+
+        <attribute>
+            <name>documentType</name>
+        </attribute>
+
+        <attribute>
+            <name>generateIdScope</name>
+        </attribute>
+
+        <attribute>
+            <name>idScope</name>
+        </attribute>
+
+        <attribute>
+            <name>useLocale</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>image</name>
+        <requiredchild>parameter parameterMap attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ImageRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>align</name>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+        </attribute>
+
+        <attribute>
+            <name>border</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>height</name>
+        </attribute>
+
+        <attribute>
+            <name>hspace</name>
+        </attribute>
+
+        <attribute>
+            <name>ismap</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>location</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>longdesc</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>src</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>usemap</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>vspace</name>
+        </attribute>
+
+        <attribute>
+            <name>width</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>imageAnchor</name>
+        <requiredchild>parameter parameterMap attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ImageAnchorRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>action</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>align</name>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+        </attribute>
+
+        <attribute>
+            <name>border</name>
+        </attribute>
+
+        <attribute>
+            <name>charSet</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>clientAction</name>
+        </attribute>
+
+        <attribute>
+            <name>coords</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disableSecondClick</name>
+        </attribute>
+
+        <attribute>
+            <name>formSubmit</name>
+        </attribute>
+
+        <attribute>
+            <name>height</name>
+        </attribute>
+
+        <attribute>
+            <name>href</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+            <reftype>url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>hrefLang</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>hspace</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>imageStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>imageStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>ismap</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>linkName</name>
+        </attribute>
+
+        <attribute>
+            <name>location</name>
+        </attribute>
+
+        <attribute>
+            <name>longdesc</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>popup</name>
+        </attribute>
+
+        <attribute>
+            <name>rel</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>rev</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>rolloverImage</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+        </attribute>
+
+        <attribute>
+            <name>shape</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>src</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>target</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>targetScope</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>type</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>usemap</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>vspace</name>
+        </attribute>
+
+        <attribute>
+            <name>width</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>imageButton</name>
+        <requiredchild>attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ImageButtonRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>accessKey</name>
+        </attribute>
+
+        <attribute>
+            <name>align</name>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>ismap</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>rolloverImage</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+        </attribute>
+
+        <attribute>
+            <name>src</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>usemap</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>label</name>
+        <requiredchild>formatDate formatNumber formatString</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.FormLabelRenderer</renderer>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>escapeWhiteSpaceForHtml</name>
+        </attribute>
+
+        <attribute>
+            <name>for</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>formatDefaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>parameter</name>
+        <requiredparent>anchor button form image imageAnchor data:anchorColumn</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ParameterRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>parameterMap</name>
+        <requiredparent>anchor button form image imageAnchor data:anchorColumn</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.ParameterMapRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>map</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>radioButtonGroup</name>
+        <renderer>workshop.netui.jspdesigner.tldx.RadioButtonGroupRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>labelStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>labelStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>optionsDataSource</name>
+        </attribute>
+
+        <attribute>
+            <name>orientation</name>
+        </attribute>
+
+        <attribute>
+            <name>repeater</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>radioButtonOption</name>
+        <requiredparent>radioButtonGroup td</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.RadioButtonOptionRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>labelStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>labelStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>retrievePopupOutput</name>
+        <requiredparent>configurePopup</requiredparent>
+        <requiredchild>#nothing</requiredchild>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>dataSource</name>
+        </attribute>
+
+        <attribute>
+            <name>tagIdRef</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>rewriteName</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.RewriteNameRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>resultId</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>rewriteURL</name>
+        <requiredchild>#nothing</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.RewriteURLRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>URL</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>scriptBlock</name>
+        <renderer></renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>placement</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>scriptContainer</name>
+        <renderer>workshop.netui.jspdesigner.tldx.ScriptContainerRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>generateIdScope</name>
+        </attribute>
+
+        <attribute>
+            <name>idScope</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>scriptHeader</name>
+        <renderer>workshop.netui.jspdesigner.tldx.ScriptHeaderRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>select</name>
+        <requiredchild>formatDate formatNumber formatString selectOption attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.SelectRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>accessKey</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+        </attribute>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>multiple</name>
+        </attribute>
+
+        <attribute>
+            <name>nullable</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>nullableOptionText</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>optionsDataSource</name>
+        </attribute>
+
+        <attribute>
+            <name>repeater</name>
+        </attribute>
+
+        <attribute>
+            <name>repeatingOrder</name>
+        </attribute>
+
+        <attribute>
+            <name>size</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>selectOption</name>
+        <requiredparent>select</requiredparent>
+        <requiredchild>label attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.SelectOptionRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>repeatingType</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>span</name>
+        <requiredchild>formatDate formatNumber formatString attribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.LabelRenderer</renderer>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>escapeWhiteSpaceForHtml</name>
+        </attribute>
+
+        <attribute>
+            <name>formatDefaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>textArea</name>
+        <renderer>workshop.netui.jspdesigner.tldx.TextAreaRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>accessKey</name>
+        </attribute>
+
+        <attribute>
+            <name>cols</name>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>readonly</name>
+        </attribute>
+
+        <attribute>
+            <name>rows</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>textBox</name>
+        <renderer>workshop.netui.jspdesigner.tldx.TextboxRenderer</renderer>
+        <whitespace>indent</whitespace>
+        <bodycontent-pref>empty</bodycontent-pref>
+
+        <attribute>
+            <name>accessKey</name>
+        </attribute>
+
+        <attribute>
+            <name>alt</name>
+        </attribute>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>dir</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>lang</name>
+            <category>internationalization</category>
+        </attribute>
+
+        <attribute>
+            <name>maxlength</name>
+        </attribute>
+
+        <attribute>
+            <name>onBlur</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onChange</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onDblClick</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onFocus</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyPress</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onKeyUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseDown</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseMove</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOut</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseOver</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onMouseUp</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>onSelect</name>
+            <propertyclass>workshop.jspdesigner.properties.EventPropertyClass</propertyclass>
+            <category>event</category>
+        </attribute>
+
+        <attribute>
+            <name>password</name>
+        </attribute>
+
+        <attribute>
+            <name>readonly</name>
+        </attribute>
+
+        <attribute>
+            <name>size</name>
+        </attribute>
+
+        <attribute>
+            <name>style</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>styleClass</name>
+            <category>Format</category>
+        </attribute>
+
+        <attribute>
+            <name>tabindex</name>
+            <category>misc</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+            <category>misc</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>tree</name>
+        <requiredchild>treeItem treeHtmlAttribute treePropertyOverride</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.TreeRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>dataSource</name>
+            <language>netuiel</language>
+        </attribute>
+
+        <attribute>
+            <name>disabledStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>disabledStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>escapeForHtml</name>
+        </attribute>
+
+        <attribute>
+            <name>expansionAction</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>iconRoot</name>
+            <category>images</category>
+        </attribute>
+
+        <attribute>
+            <name>imageRoot</name>
+            <category>images</category>
+        </attribute>
+
+        <attribute>
+            <name>itemIcon</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lastLineJoinImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lastNodeCollapsedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lastNodeExpandedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lineJoinImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>nodeCollapsedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>nodeExpandedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>renderTagIdLookup</name>
+        </attribute>
+
+        <attribute>
+            <name>rootNodeCollapsedImage</name>
+            <category>images</category>
+        </attribute>
+
+        <attribute>
+            <name>rootNodeExpandedImage</name>
+            <category>images</category>
+        </attribute>
+
+        <attribute>
+            <name>runAtClient</name>
+        </attribute>
+
+        <attribute>
+            <name>selectedStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>selectedStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>selectionAction</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>selectionTarget</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>treeStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>treeStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>unselectedStyle</name>
+            <propertyclass>workshop.jspdesigner.properties.JspStyleProperty</propertyclass>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>unselectedStyleClass</name>
+            <category>format</category>
+        </attribute>
+
+        <attribute>
+            <name>verticalLineImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>treeContent</name>
+        <requiredparent>treeItem</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.TreeContentRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>treeHtmlAttribute</name>
+        <requiredparent>treeItem tree</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.TreeHtmlAttributeRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>applyToDescendents</name>
+        </attribute>
+
+        <attribute>
+            <name>attribute</name>
+        </attribute>
+
+        <attribute>
+            <name>onDiv</name>
+        </attribute>
+
+        <attribute>
+            <name>onIcon</name>
+        </attribute>
+
+        <attribute>
+            <name>onSelectionLink</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>treeItem</name>
+        <requiredparent>tree treeItem</requiredparent>
+        <requiredchild>treeItem treeLabel treeContent treePropertyOverride</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.TreeItemRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>action</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>clientAction</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>disabled</name>
+        </attribute>
+
+        <attribute>
+            <name>expandOnServer</name>
+        </attribute>
+
+        <attribute>
+            <name>expanded</name>
+        </attribute>
+
+        <attribute>
+            <name>href</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+        </attribute>
+
+        <attribute>
+            <name>icon</name>
+            <propertyclass>workshop.jspdesigner.properties.URIPropertyClass</propertyclass>
+        </attribute>
+
+        <attribute>
+            <name>scope</name>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>target</name>
+        </attribute>
+
+        <attribute>
+            <name>title</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>treeLabel</name>
+        <requiredparent>treeItem</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.TreeLabelRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+    </tag>
+
+    <tag>
+        <name>treePropertyOverride</name>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>expansionAction</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>iconRoot</name>
+            <category>images</category>
+        </attribute>
+
+        <attribute>
+            <name>imageRoot</name>
+            <category>images</category>
+        </attribute>
+
+        <attribute>
+            <name>itemIcon</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lastLineJoinImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lastNodeCollapsedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lastNodeExpandedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>lineJoinImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>nodeCollapsedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>nodeExpandedImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>selectionAction</name>
+            <category>general</category>
+            <reftype>netui-action-url</reftype>
+        </attribute>
+
+        <attribute>
+            <name>verticalLineImage</name>
+            <category>images</category>
+            <reftype>img-url</reftype>
+        </attribute>
+
+    </tag>
+
+</taglib>

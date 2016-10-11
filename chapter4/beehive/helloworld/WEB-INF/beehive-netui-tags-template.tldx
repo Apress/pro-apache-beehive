@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib>
+    <uri>http://beehive.apache.org/netui/tags-template-1.0</uri>
+    <palettegenerator>workshop.netui.jspdesigner.generators.NetuiTemplatePaletteGenerator</palettegenerator>
+    <link>
+        <prefix>netui</prefix>
+        <uri>http://beehive.apache.org/netui/tags-html-1.0</uri>
+    </link>
+    <link>
+        <prefix>data</prefix>
+        <uri>http://beehive.apache.org/netui/tags-databinding-1.0</uri>
+    </link>
+
+    <tag>
+        <name>attribute</name>
+        <renderer>workshop.netui.jspdesigner.tldx.AttributeRenderer</renderer>
+
+        <attribute>
+            <name>defaultValue</name>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>divPanel</name>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>firstPage</name>
+            <category>general</category>
+        </attribute>
+
+        <attribute>
+            <name>tagId</name>
+            <category>general</category>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>includeSection</name>
+        <renderer>workshop.netui.jspdesigner.tldx.IncludeSectionRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>defaultPage</name>
+        </attribute>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>section</name>
+        <requiredparent>template divPanel repeater</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.SectionRenderer</renderer>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>visible</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>setAttribute</name>
+        <requiredparent>template</requiredparent>
+        <renderer>workshop.netui.jspdesigner.tldx.SetAttributeRenderer</renderer>
+
+        <attribute>
+            <name>name</name>
+        </attribute>
+
+        <attribute>
+            <name>value</name>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <name>template</name>
+        <requiredchild>section setAttribute</requiredchild>
+        <renderer>workshop.netui.jspdesigner.tldx.TemplateRenderer</renderer>
+        <whitespace>indent</whitespace>
+
+        <attribute>
+            <name>reportErrors</name>
+        </attribute>
+
+        <attribute>
+            <name>templatePage</name>
+        </attribute>
+
+    </tag>
+
+</taglib>

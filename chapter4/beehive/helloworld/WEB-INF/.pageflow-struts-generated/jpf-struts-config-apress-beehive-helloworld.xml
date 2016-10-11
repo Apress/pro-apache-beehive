@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Generated from /apress/beehive/helloworld/HelloWorldController.jpf on Thu Dec 30 14:54:09 PST 2004-->
+<struts-config>
+  <form-beans/>
+  <global-exceptions/>
+  <global-forwards/>
+  <action-mappings>
+    <action path="/begin" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="apress.beehive.helloworld.HelloWorldController" scope="request" validate="false">
+      <forward name="success" path="/hello.jsp"/>
+    </action>
+    <action path="/cancel" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="apress.beehive.helloworld.HelloWorldController" scope="request" validate="false" className="org.apache.beehive.netui.pageflow.config.PageFlowActionMapping">
+      <set-property property="readonly" value="true"/>
+      <set-property property="simpleAction" value="true"/>
+      <forward name="_defaultForward" path="/begin.do"/>
+    </action>
+    <action path="/sayBye" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="apress.beehive.helloworld.HelloWorldController" scope="request" validate="false">
+      <forward name="success" path="/bye.jsp"/>
+    </action>
+  </action-mappings>
+  <controller processorClass="org.apache.beehive.netui.pageflow.PageFlowRequestProcessor" inputForward="true" className="org.apache.beehive.netui.pageflow.config.PageFlowControllerConfig">
+    <set-property property="isReturnToPageDisabled" value="true"/>
+    <set-property property="isReturnToActionDisabled" value="true"/>
+    <set-property property="sharedFlowModules" value=""/>
+    <set-property property="controllerClass" value="apress.beehive.helloworld.HelloWorldController"/>
+    <set-property property="isMissingDefaultMessages" value="true"/>
+  </controller>
+  <message-resources key="_defaultValidationMessages" parameter="org.apache.beehive.netui.pageflow.validation.defaultMessages" null="true"/>
+</struts-config>

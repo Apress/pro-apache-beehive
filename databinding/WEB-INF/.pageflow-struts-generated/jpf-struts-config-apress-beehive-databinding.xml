@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<!--Generated from /WEB-INF/.tmpbeansrc/apress/beehive/databinding/Controller.java on Sun Mar 06 17:05:22 PST 2005-->
+<struts-config>
+  <form-beans/>
+  <global-exceptions/>
+  <global-forwards>
+    <forward name="_auto" path=""/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/begin" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="apress.beehive.databinding.Controller" scope="request" validate="false">
+      <forward name="success" path="/index.jsp"/>
+    </action>
+    <action path="/submitDatabinding" type="org.apache.beehive.netui.pageflow.internal.FlowControllerAction" parameter="apress.beehive.databinding.Controller" scope="request" validate="false">
+      <forward name="success" path="/databinding.jsp"/>
+    </action>
+  </action-mappings>
+  <controller processorClass="org.apache.beehive.netui.pageflow.PageFlowRequestProcessor" inputForward="true" className="org.apache.beehive.netui.pageflow.config.PageFlowControllerConfig">
+    <set-property property="isReturnToPageDisabled" value="true"/>
+    <set-property property="isReturnToActionDisabled" value="true"/>
+    <set-property property="sharedFlows" value=""/>
+    <set-property property="controllerClass" value="apress.beehive.databinding.Controller"/>
+    <set-property property="isMissingDefaultMessages" value="true"/>
+  </controller>
+  <message-resources key="_defaultValidationMessages" parameter="org.apache.beehive.netui.pageflow.validation.defaultMessages" null="true"/>
+</struts-config>

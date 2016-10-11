@@ -1,0 +1,155 @@
+package com.apress.beehive.bookstore;
+
+import org.apache.beehive.netui.pageflow.Forward;
+import org.apache.beehive.netui.pageflow.PageFlowController;
+import org.apache.beehive.netui.pageflow.annotations.Jpf;
+import org.apache.beehive.controls.api.bean.Control;
+
+import apress.beehive.controls.bookstoredb.BookDBControl;
+import apress.beehive.conrols.ejbcontrol.BookDetailEJBControl;
+import com.apress.beehive.bookstore.vo.Book;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.rmi.RemoteException;
+
+
+@Jpf.Controller (
+        messageBundles = {
+        @Jpf.MessageBundle(bundlePath = "apress.beehive.messages.bookstore")
+    }
+        )
+
+public class BookController extends PageFlowController
+{
+
+    HashMap booksMap = new HashMap();
+   @Control
+    public BookDBControl dbcontrol;
+
+    @Control
+     public BookDetailEJBControl ejbcontrol;
+
+
+    @Jpf.Action(
+        forwards = {
+        	@Jpf.Forward(name = "success", path = "index.jsp")
+     	 })
+    protected Forward begin()
+    {
+        this.getRequest();
+        return new Forward("success");
+    }
+    
+   @Jpf.Action(
+        forwards = {
+        	@Jpf.Forward(name = "success",path = "addBook.jsp") 
+     	})
+    protected Forward showAddBookPage()throws RemoteException
+    {
+       System.out.println("EJBCONTROL "+ ejbcontrol.hello());
+       return new Forward("success",new BookForm());
+    }
+    
+    
+    @Jpf.Action(
+        forwards = {
+            @Jpf.Forward(name = "success", path = "searchBook.jsp") 
+        })
+    protected Forward showSearchBookPage()
+    {
+       return new Forward("success",new BookForm() );
+    }
+
+    @Jpf.Action(
+        forwards = {
+            @Jpf.Forward(name = "success", path = "viewBook.jsp")
+        })
+    protected Forward getBookDetails()throws SQLException
+    {
+        BookForm form =new BookForm();
+        String bookId = this.getRequest().getParameter("bookId");
+        System.out.println("Book id is "+bookId);
+       Book abook= dbcontrol.getBookDetails(Integer.parseInt(bookId) );
+        form.setaBook(abook);
+       return new Forward("success", form);
+    }
+
+
+    @Jpf.Action(
+        forwards = {
+        	@Jpf.Forward(name = "success",path = "viewBook.jsp")
+           },
+          validationErrorForward = @Jpf.Forward(name = "failure", navigateTo = Jpf.NavigateTo.currentPage)
+            )
+    protected Forward addBook(BookForm form) throws RemoteException,SQLException
+    {
+        ejbcontrol.insertBookDetail(form.getaBook());
+        return new Forward("success", form);
+    }
+    
+    @Jpf.Action(
+        forwards = {
+            @Jpf.Forward(name = "success", path = "index.jsp") 
+        })
+     protected Forward submitForm(BookForm form)
+    {
+     
+     return new Forward("success",getBook());
+    }
+
+     @Jpf.Action(
+        forwards = {
+            @Jpf.Forward(name = "success", path = "books.jsp")
+        })
+     protected Forward submitSearchBook(BookForm form)throws SQLException
+    {
+        ResultSet rs= dbcontrol.findBooksByAuthorAndType(form.getaBook().getAuthor(),form.getaBook().getBook_type());
+         this.setBooksMap(this.populateBookDetails(rs));
+     return new Forward("success",getBook());
+    }
+
+    private BookForm getBook()
+    {
+        BookForm bookDetails= new BookForm();
+        bookDetails.getaBook().setTitle("Pro-Beehive");
+        bookDetails.getaBook().setBook_type("Book");
+        bookDetails.getaBook().setAuthor("Kunal Mittal");
+        bookDetails.getaBook().setIsbn("0-13-911181-6");
+        bookDetails.getaBook().setCatalogNo("26");
+        bookDetails.getaBook().setPublication("APress");
+        //bookDetails.getaBook().setPubDate(null);
+        bookDetails.getaBook().setComments("This is a good reference book for technical people.");
+        bookDetails.getaBook().setAvailable(true);
+         return bookDetails;
+    }
+
+    public HashMap getBooksMap() {
+        return booksMap;
+    }
+
+    public void setBooksMap(HashMap booksMap) {
+        this.booksMap = booksMap;
+    }
+
+    private HashMap populateBookDetails(ResultSet oResultSet) throws SQLException
+    {
+        HashMap books = new LinkedHashMap();
+        while (oResultSet.next())
+            {
+                Book book= new Book();
+
+                book.setBook_Id(oResultSet.getInt("book_id"));
+                book.setAuthor(oResultSet.getString("author"));
+                book.setTitle(oResultSet.getString("title"));
+                book.setPublication(oResultSet.getString("publication"));
+                book.setIsbn(oResultSet.getString("isbn"));
+            book.setBook_type(oResultSet.getString("book_type"));
+
+                books.put(String.valueOf(book.getBook_Id()),book);
+            }
+            return books;
+     }
+
+}

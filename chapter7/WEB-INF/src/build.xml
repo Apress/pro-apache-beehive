@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!--
+   Copyright 2004 The Apache Software Foundation.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+   
+       http://www.apache.org/licenses/LICENSE-2.0
+   
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  
+   $Header:$
+ -->
+
+<!--
+  An Ant build file for compiling the petstoreWeb Beehive sample web application.
+-->
+<project name="bookstore" default="usage" basedir="../..">
+
+<property name="web.inf.dir" location="${webapp.dir}/WEB-INF" />
+  <property name="attachments.dir" location="${web.inf.dir}/attachments" />
+  <property name="classes.dir" location="${web.inf.dir}/classes" />
+  <property name="gen.dir" location="${web.inf.dir}/gen" />
+  <property name="lib.dir" location="${web.inf.dir}/lib" />
+  <property name="src.dir" location="${web.inf.dir}/src" />
+  
+    <property environment="os"/>
+    <property file="${basedir}/WEB-INF/src/build.properties"/>
+
+    <import file="${beehive.home}/beehive-imports.xml"/>
+    <import file="${beehive.home}/ant/beehive-tools.xml"/>
+
+    <property name="webapp.dir" location="${basedir}"/>
+    <property name="contextPath" value="library"/>
+
+    <property name="tmp.sourcegen.dir" value=".tmpbeansrc"/>
+    <property name="tmp.jpfgen.dir" value=".pageflow-struts-generated"/>
+
+    <!-- Define the classpath used to build the webapp -->
+    <path id="webapp.build.classpath">
+        <pathelement location="${servlet-api.jar}"/>
+        <pathelement location="${jsp-api.jar}"/>
+        <pathelement location="${webapp.dir}/WEB-INF/classes"/>
+        <fileset dir="${webapp.dir}/WEB-INF/lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>    
+
+    <target name="deploy-beehive" description="Copy the Beehive webapp rutime into the petstoreWeb webapp">
+        <deploy-netui webappDir="${webapp.dir}"/>
+        <deploy-wsm webappDir="${webapp.dir}"/>
+    </target>
+
+    <target name="build" depends="deploy-beehive" description="Build the petstoreWeb webapp">
+        <available property="webapp.dir.available" file="${webapp.dir}" type="dir"/>
+        <fail unless="webapp.dir.available" message="Can't find the webapp directory ${webapp.dir}"/>
+
+        <!-- 
+            this directory needs to get whacked before every build so 
+            that control interface repackagings don't cause stale
+            files to be compiled 
+          -->
+        <delete dir="${webapp.dir}/WEB-INF/${tmp.sourcegen.dir}" includeEmptyDirs="true"/>
+
+        <mkdir dir="${webapp.dir}/WEB-INF/classes"/>
+
+        <!-- compile XSDs -->
+        <build-schemas sourceDir="${webapp.dir}/WEB-INF/schemas" destDir="${webapp.dir}/WEB-INF/classes"/>
+
+        <!-- compile controls -->
+        <build-controls sourceDir="${webapp.dir}/WEB-INF/src" 
+                        destdir="${webapp.dir}/WEB-INF/classes" 
+                        tmpdir="${webapp.dir}/WEB-INF/${tmp.sourcegen.dir}"
+                        classpathRef="webapp.build.classpath"/>
+
+        <!-- compile JPFs -->
+        <build-pageflows sourceDir="${webapp.dir}" 
+                         destdir="${webapp.dir}/WEB-INF/classes" 
+                         tmpdir="${webapp.dir}/WEB-INF/${tmp.sourcegen.dir}"
+                         classpathRef="webapp.build.classpath"/>
+                         
+                         <taskdef name="apt" 
+			         classname="org.apache.beehive.controls.runtime.generator.AptTask" 
+			         classpathref="webapp.build.classpath" 
+			         onerror="report" />
+			     <apt
+			         srcdir="${webapp.dir}/WEB-INF/src" 
+			         destdir="${webapp.dir}/WEB-INF/classes"
+			         gendir="${webapp.dir}/WEB-INF/gen"
+			         classpathref="build.classpath" 
+			         compileByExtension="true" 
+			         srcExtensions="*.java,*.jws"  debug="true" />
+
+        <!-- copy resources -->
+  	<echo>Copy all .properties and .xml files</echo>
+        <copy todir="${webapp.dir}/WEB-INF/classes">
+            <fileset dir="${webapp.dir}/WEB-INF/src" includes="**/*.properties"/>
+            <fileset dir="${webapp.dir}/WEB-INF/src" includes="**/*.xml"/>
+        </copy>
+    </target>
+
+    <target name="clean" description="Clean the petstoreWeb">
+        <delete dir="${webapp.dir}/WEB-INF/classes" includeEmptyDirs="true"/>
+        <delete dir="${webapp.dir}/WEB-INF/${tmp.sourcegen.dir}" includeEmptyDirs="true"/>
+        <delete dir="${webapp.dir}/WEB-INF/${tmp.jpfgen.dir}" includeEmptyDirs="true"/>
+    </target>
+
+    <target name="war" description="Build a compressed WAR file that can be deployed to an application container">
+        <property name="archive.dir" value="${webapp.dir}/.."/>
+
+ 
+        <!-- this does *not* exclude source from the archive -->
+        <jar destfile="../../${contextPath}.war" >
+            <fileset dir="${webapp.dir}">
+                <exclude name="WEB-INF/src/**"/>
+                <exclude name="${contextPath}.war"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="usage" description="Print usage information for this build file">
+        <echo>
+Welcome to the Beehive petstoreWeb sample webapp!  
+
+To run the webapp, two steps need to occur:
+- copy the Beehive runtime to the webapp
+- build the webapp
+
+Once the webapp is built, it's ready to deploy onto your application container.
+        </echo>
+
+        <java fork="no" classname="org.apache.tools.ant.Main">
+            <arg line="-f ${ant.file} -projecthelp"/>
+        </java>
+    </target>
+
+</project>
